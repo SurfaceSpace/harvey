@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BreadSeal</title>
+    <style>
+      .circle {
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        border: 2px solid black;
+        overflow: hidden;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      body {
+        background-image: url('sea.gif');
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0;
+        padding: 0;
+        
+        background-position: center center;
+      }
+      .circle img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .title {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 24px;
+      }
+
+      .button {
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      .button button {
+        padding: 10px 20px;
+        font-size: 18px;
+      }
+
+      .picture-column {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+      }
+
+      .picture-column figure {
+        margin: 10px 0;
+      }
+
+      .picture-column img {
+        width: 300px;
+        height: auto;
+        object-fit: auto;
+        border-radius: 8px;
+      }
+
+      .picture-column figcaption {
+        margin-top: 5px;
+        text-align: center;
+      }
+
+      .picture-column p {
+        display: none;
+        margin: 20px 0;
+        text-align: justify;
+        line-height: 1.4;
+      }
+    </style>
+    <script>
+      function toggleImages() {
+        var pictureColumn = document.querySelector('.picture-column');
+        pictureColumn.style.display = pictureColumn.style.display === 'none' ? 'flex' : 'none';
+      }
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var buttons = document.querySelectorAll('.picture-column button');
+        buttons.forEach(function(button) {
+          button.addEventListener('click', function() {
+            var description = this.parentNode.nextElementSibling;
+            description.style.display = description.style.display === 'none' ? 'block' : 'none';
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="circle">
+      <img src="Seal2.gif" alt="Your Image">
+    </div>
+
+    <div class="title">
+      <h2>Title</h2>
+    </div>
+
+    <div class="button">
+      <button onclick="toggleImages()">Click Me</button>
+      <div class="picture-column">
+        <figure>
+          <img src="seaweedbread.jpeg" alt="Picture 1">
+          <figcaption>
+            <button><b>Seaweed Bread</b></button>
+          </figcaption>
+          <p><b>Seaweed Bread:</b> A unique bread variation that incorporates dried seaweed flakes for a delightful taste and distinct appearance.<br>
+          <b>Recipe:</b>
+          - 2 cups all-purpose flour<br>
+             - 1 teaspoon instant yeast<br>
+             - 1 teaspoon salt<br>
+             - 1 tablespoon sugar<br>
+             - 1 tablespoon dried seaweed flakes<br>
+             - 1 cup lukewarm water</p>
+          <hr>
+        </figure>
+        <figure>
+          <img src="ink.jpg" alt="Picture 2">
+          <figcaption>
+            <button><b>Squid Ink Bread</b></button>
+          </figcaption>
+          <p><b>Squid Ink Bread:</b> A unique bread that incorporates squid ink, resulting in a striking black color and subtle seafood flavor.<br>
+          <b>Recipe:</b>
+          - 2 cups bread flour<br>
+             - 1 teaspoon instant yeast<br>
+             - 1 teaspoon salt<br>
+             - 1 tablespoon sugar<br>
+             - 1 tablespoon squid ink<br>
+             - 1/2 cup lukewarm water</p>
+          <hr>
+        </figure>
+        <figure>
+          <img src="shrimp.jpeg" alt="Picture 3">
+          <figcaption>
+            <button><b>Shrimp Bread</b></button>
+          </figcaption>
+          <p><b>Shrimp Bread:</b> A delicious bread variety that incorporates chopped cooked shrimp, adding a delightful seafood flavor.<br>
+          <b>Recipe:</b><br>
+          - 2 cups all-purpose flour<br>
+             - 1 teaspoon instant yeast<br>
+             - 1 teaspoon salt<br>
+             - 1 tablespoon sugar<br>
+             - 1/2 cup cooked shrimp, chopped<br>
+             - 1/2 cup lukewarm water</p>
+          <hr>
+        </figure>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+
+
+
